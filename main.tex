@@ -28,6 +28,14 @@
 \newpage
 \section{\href{http://codeforces.com/contest/687}{Codeforces Round 360 (Div 1)}}
 
+\subsection{The Values You Can Make}
+
+We can use a DP with state (position, sum1, sum2) where we want sum1 to be $k$ at the end, and the different valid values of sum2 will be the answer.
+\\ \\
+\textbf{Implementation:} \href{http://codeforces.com/contest/687/submission/19365759}{C++ code}
+\\ \\
+\textbf{Notes:} Should start by trying DP first before looking for a more complicated approach and check the amount of memory of the solution.
+
 \subsection{Dividing Kingdom II}
 
 In any interval sort the edges in decreasing order by their weight, then the important edges are the ones that join two different components and the first edge that joins vertices that are in the same component and apart from each other by an even number of edges, so the number of important edges is at most n.
