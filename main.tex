@@ -1,0 +1,41 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\setlength\parindent{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Codeforces notes}
+\cfoot{\thepage/\pageref{LastPage}}
+
+\title{Codeforces notes}
+\author{Mario Ynocente Castro (MarioYC)}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{\href{http://codeforces.com/contest/687}{Codeforces Round 360 (Div 1)}}
+
+\subsection{Dividing Kingdom II}
+
+In any interval sort the edges in decreasing order by their weight, then the important edges are the ones that join two different components and the first edge that joins vertices that are in the same component and apart from each other by an even number of edges, so the number of important edges is at most n.
+\\ \\
+We can build a segment tree that keeps the important edges for an interval, and then for each query we will do at most $\log n$ steps that consist of merging these sets of important edges.
+\\ \\
+\textbf{Implementation:} \href{http://codeforces.com/contest/687/submission/19196725}{C++ code}
+\\ \\
+\textbf{Notes:} The same approach would work for similar problems like MST and number of connected components.
+
+\end{document}
