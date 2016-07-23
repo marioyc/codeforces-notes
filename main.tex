@@ -36,7 +36,13 @@ We can build a segment tree that keeps the important edges for an interval, and 
 \\ \\
 \textbf{Implementation:} \href{http://codeforces.com/contest/687/submission/19196725}{C++ code}
 \\ \\
-\textbf{Notes:} The same approach would work for similar problems like MST and number of connected components.
+\textbf{Notes:}
+\begin{itemize}
+\item
+The same approach would work for similar problems like MST and number of connected components.
+\item
+The intervals that are going to be merged could intersect and it would still be correct, so we could use a sparse table and then only one merge per query would be necessary, but the complexity of the preprocessing will increase, since we no longer have the guarantee that each edge will be added at most $O(\log m)$ times.
+\end{itemize}
 
 \section{\href{http://codeforces.com/contest/691}{Educational Codeforces Round 14}}
 
