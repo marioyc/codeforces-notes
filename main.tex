@@ -38,4 +38,14 @@ We can build a segment tree that keeps the important edges for an interval, and 
 \\ \\
 \textbf{Notes:} The same approach would work for similar problems like MST and number of connected components.
 
+\section{\href{http://codeforces.com/contest/691}{Educational Codeforces Round 14}}
+
+\subsection{Couple Cover}
+
+If all $a_i$ are different and $P = 3 \cdot 10^6$ then the number of pairs $(i,j)$ for which $a_i a_j \leq P$ is $O(P\log P)$ and if these values are sorted then we can go through these pairs in $O(n + P\log P)$. For the general case, we will first need to compress these values.
+\\ \\
+While going through the values we can increase a counter for each different value of the product, then we can accumulate these counters.
+\\ \\
+\textbf{Implementation:} \href{http://codeforces.com/contest/691/submission/19352079}{C++ code}
+
 \end{document}
