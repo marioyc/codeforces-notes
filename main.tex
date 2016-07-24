@@ -5,6 +5,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{hyperref}
+\usepackage{graphicx}
 
 \setlength\parindent{0pt}
 
@@ -51,6 +52,29 @@ The same approach would work for similar problems like MST and number of connect
 \item
 The intervals that are going to be merged could intersect and it would still be correct, so we could use a sparse table and then only one merge per query would be necessary, but the complexity of the preprocessing will increase, since we no longer have the guarantee that each edge will be added at most $O(\log m)$ times.
 \end{itemize}
+
+\section{\href{http://codeforces.com/contest/690}{Helvetic Coding Contest 2016}}
+
+\subsection{Brain Network (hard)}
+
+Let $u$ and $v$ be the extreme vertices of the diameter and $w$ a new vertex we'll add,
+we can prove that the new value of the diameter will be between $d(u,v), d(u,w)$ and $d(w,v)$.
+\\ \\
+If the length of the diameter increases then one of the new extreme vertices should be $w$,
+and if the other extreme is a vertex $x$ which isn't $u$ nor $v$, then there
+are two cases:
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.6]{img/helvetic-c.jpg}
+\caption{Possible cases}
+\end{figure}
+
+In both cases we get contradictions.
+\\ \\
+\textbf{Implementation:} \href{http://codeforces.com/contest/690/submission/19389500}{C++ code}
+
+\subsection{The Wall (hard)}
 
 \section{\href{http://codeforces.com/contest/691}{Educational Codeforces Round 14}}
 
