@@ -35,7 +35,7 @@ We can use a DP with state (position, sum1, sum2) where we want sum1 to be $k$ a
 \\ \\
 \textbf{Implementation:} \href{http://codeforces.com/contest/687/submission/19365759}{C++ code}
 \\ \\
-\textbf{Notes:} Should start by trying DP first before looking for a more complicated approach and check the amount of memory of the solution.
+\textbf{Note:} Should start by trying DP first before looking for a more complicated approach and check the amount of memory of the solution.
 
 \subsection{Dividing Kingdom II}
 
@@ -75,6 +75,21 @@ In both cases we get contradictions.
 \textbf{Implementation:} \href{http://codeforces.com/contest/690/submission/19389500}{C++ code}
 
 \subsection{The Wall (hard)}
+
+We can get the recurrence:
+
+\begin{center}
+$\forall i > 0, f(i) = \sum_{w = 0}^W (f(i - (w + 1)) \cdot H^w)$
+
+$f(0) = f(-1) = 1$
+\end{center}
+
+which we can use to solve the problem using matrix exponentiation.
+\\ \\
+\textbf{Implementation:} \href{http://codeforces.com/contest/690/submission/19405468}{C++ code}
+\\ \\
+\textbf{Note:} Started with a DP state (pos, behind, have) to accumulate the length of all segments
+in have, but fixing one segment at the time gave the simpler recurrence.
 
 \section{\href{http://codeforces.com/contest/691}{Educational Codeforces Round 14}}
 
